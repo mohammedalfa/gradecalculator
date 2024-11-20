@@ -21,7 +21,7 @@ for line in open('data/students.txt', 'r'):
 
 assignments = {}
 assignment_data = open('data/assignments.txt', 'r').read()
-assignment_data = assignment_data.split('/n')
+assignment_data = assignment_data.split('\n')
 for i in range(0, len(assignment_data)-2, 3):
     name = assignment_data[i]
     id = assignment_data[i+1]
