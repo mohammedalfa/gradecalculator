@@ -2,8 +2,8 @@ import os
 import matplotlib.pyplot as plt
 
 submissions = []
-for file in os.listdir('data\submissions'):
-    data = open(f"data\submissions\{file}", 'r')
+for file in os.listdir('data/submissions'):
+    data = open(f"data/submissions/{file}", 'r')
     data = data.read()
     data = data.split("|")
     student_id = data[0]
@@ -13,15 +13,15 @@ for file in os.listdir('data\submissions'):
     submissions.append(submission)
 
 students = {}
-for line in open('data\students.txt', 'r'):
+for line in open('data/students.txt', 'r'):
     id = line[:3]
     name = line[3:]
     name = name.rstrip()
     students[name] = id
 
 assignments = {}
-assignment_data = open('data\assignments.txt', 'r').read()
-assignment_data = assignment_data.split('\n')
+assignment_data = open('data/assignments.txt', 'r').read()
+assignment_data = assignment_data.split('/n')
 for i in range(0, len(assignment_data)-2, 3):
     name = assignment_data[i]
     id = assignment_data[i+1]
